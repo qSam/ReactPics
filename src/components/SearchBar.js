@@ -4,8 +4,14 @@ import React from 'react';
 class SearchBar extends React.Component {
     state = { term: ''};
 
+    constructor() {
+        super();
+        this.onFormSubmit = this.onFormSubmit.bind(this);
+    }
+
     onFormSubmit(event) {
         event.preventDefault();
+        console.log(this.state.term);
     }
     
     render() {
